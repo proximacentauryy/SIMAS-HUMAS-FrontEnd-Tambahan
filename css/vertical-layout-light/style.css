@@ -30592,6 +30592,15 @@ div.tagsinput span.tag a {
   }
 }
 
+.table-main {
+  overflow-x: auto;
+  overflow-y: auto;
+  height: auto;
+  width:100%;
+  display: block;
+
+}
+
 .animate-gradient {
   background: linear-gradient(-45deg, #74efff, #9c27b0);
   background-size: 400% 400%;
