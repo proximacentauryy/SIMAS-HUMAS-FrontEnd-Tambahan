@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>SIMAS</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="../vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="../js/select.dataTables.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../css/vertical-layout-light/style.css">
+  <link rel="stylesheet" href="../vendors/mdi/css/materialdesignicons.min.css">
+  <!-- endinject -->
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="../index.html"><img src="../images/logosimas.png" class="mr-2" alt="SIMAS"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-bell"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="#" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="ti-settings text-primary"></i>
+                Settings
+              </a>
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="row">
+                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <h3 class="font-weight-bold">JURNAL SISWA PKL</h3> <!--xxx = jurusan-->
+                      <h6 class="font-weight-normal mb-0"> Laporan Kegiatan Siswa di Industri | <span class="text-primary"> SIMAS </span></h6>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+            <div class="template-demo">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Tambah Data</button>
+            </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table id="table" class="table-sm">
+                      <tr>
+                        <th> Nama </th>
+                        <td>:</td>
+                        <td> Raib Permata </td>
+                      </tr>
+                      <tr>
+                        <th> Kelas </th>
+                        <td>:</td>
+                        <td> XI RPL C</td>
+                      </tr>
+                      <tr> 
+                        <th> NIS </th>
+                        <td>:</td>
+                        <td> 27767 </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive pt-3">
+                    <table id="tablejurnal" class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th rowspan="2"> No. </th>
+                          <th rowspan="2"> Hari / Tanggal </th>
+                          <th colspan="2"> Waktu </th>
+                          <th rowspan="2"> Kegiatan </th>
+                          <th rowspan="2"> Ket. Alat </th>
+                          <th rowspan="2"> Bukti </th>
+                        </tr>
+                        <tr>
+                          <th> Mulai </th>
+                          <th> Selesai </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> 1 </td>
+                          <td> 1/3/2023 </td>
+                          <td> 00.00 </td>
+                          <td> 00.00 </td>
+                          <td> ngelembur SIMAS </td>
+                          <td> Laptop pribadi </td>
+                          <td> <a href="#" class="badge badge-primary" data-toggle="modal" data-target="#buktipkl" style="font-size: 15px;"><i class="ti-file badge-icon-prepend"></i>Lihat Bukti </a> </td>
+                        </tr>
+                        <tr>
+                          <td> 2 </td>
+                          <td> 2/3/2023 </td>
+                          <td> 00.00 </td>
+                          <td> 00.00 </td>
+                          <td> ngelembur SIMAS </td>
+                          <td> Laptop pribadi </td>
+                          <td> <a href="#" class="badge badge-primary" data-toggle="modal" data-target="#buktipkl" style="font-size: 15px;"><i class="ti-file badge-icon-prepend"></i>Lihat Bukti </a> </td>
+                        </tr>
+                        <tr>
+                          <td> 3 </td>
+                          <td> 3/3/2023 </td>
+                          <td> 00.00 </td>
+                          <td> 00.00 </td>
+                          <td> ngelembur SIMAS </td>
+                          <td> Laptop pribadi </td>
+                          <td> <a href="#" class="badge badge-primary" data-toggle="modal" data-target="#buktipkl" style="font-size: 15px;"><i class="ti-file badge-icon-prepend"></i>Lihat Bukti </a> </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <form>
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="exampleModalLabel">PKL hari ini </h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                      <label for="haritanggal" class="col-form-label"> Hari / Tanggal </label>
+                      <input type="date" class="form-control" id="haritanggal">
+                    </div>
+                    <div class="form-group">
+                      <div class="form-group row">
+                        <label for="waktumulai" class="col-sm-6 col-form-label">Mulai</label>
+                        <label for="waktuselesai" class="col-sm-6 col-form-label">Selesai</label>
+                        <div class="col-sm-6">
+                          <input type="time" class="form-control" id="waktumulai">
+                        </div>
+                        <div class="col-sm-6">
+                          <input type="time" class="form-control" id="waktuselesai">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="kegiatan" class="col-form-label">Kegiatan</label>
+                      <input type="text" class="form-control" id="kegiatan" placeholder="Kegiatan PKL hari ini">
+                    </div>
+                    <div class="form-group">
+                      <label for="alat" class="col-form-label">Keterangan Alat</label>
+                      <input type="text" class="form-control" id="alat" placeholder="Komputer, Laptop pribadi, dll">
+                    </div>
+                    <div class="form-group">
+                      <label>Bukti</label>
+                      <input type="file" class="file-upload-default" id="fotobuktipkl" name="fotobuktipkl">
+                      <div class="input-group col-xs-12">
+                        <input type="text" class="form-control file-upload-info" disabled placeholder="Unggah foto bukti PKL">
+                        <span class="input-group-append">
+                          <button class="file-upload-browse btn btn-primary" type="button">Unggah</button>
+                        </span>
+                      </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-secondary btn-fw" data-dismiss="modal">Tutup</button>
+                  <button type="button" class="btn btn-primary">Simpan Data</button>
+                </div> 
+              </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="modal fade" id="buktipkl" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+              <form>
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="exampleModalLabel"> Bukti PKL Siswa </h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body d-flex justify-content-center">
+                  <a href="../images/carousel/banner_9.jpg" target="blank" class="image-tile"><img src="../images/carousel/banner_9.jpg" alt="image small" class="image-size-m"></a>
+                </div> 
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-secondary btn-fw" data-dismiss="modal">Tutup</button>
+                </div> 
+              </div>
+              </form>
+            </div>
+          </div>
+
+          
+
+
+          
+
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">SIMAS © 2023. All rights reserved.</span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../vendors/chart.js/Chart.min.js"></script>
+  <script src="../vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="../vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="../js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../js/off-canvas.js"></script>
+  <script src="../js/hoverable-collapse.js"></script>
+  <script src="../js/template.js"></script>
+  <script src="../js/settings.js"></script>
+  <script src="../js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/Chart.roundedBarCharts.js"></script>
+  <script src="../js/typeahead.js"></script>
+  <script src="../js/select2.js"></script>
+
+  <script src="../js/file-upload.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+  <script>
+    $(document).ready(function () {
+    $('#tablejurnal').DataTable();
+  } ) ;
+  </script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
+
